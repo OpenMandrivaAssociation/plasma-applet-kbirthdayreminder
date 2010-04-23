@@ -1,7 +1,7 @@
 %define name	plasma-applet-kbirthdayreminder
 %define srcname birthday-plasmoid
 %define version	 0.9.73
-%define release	%mkrel 1
+%define release	%mkrel 2
 %define Summary	 A reminder for birthdays and anniversaries
 
 
@@ -10,10 +10,10 @@ Name:		%name
 Version:	%version
 Release:	%release
 Source0:	http://kde-look.org/CONTENT/content-files/91641-%srcname-%version.tar.bz2
+Patch0:		plasma-applet-kbirthdayreminder-0.9.73-mdv-fix-icon-and-category.patch
 License:	GPLv2
 Group:		Graphical desktop/KDE
 URL:		http://kde-look.org/content/show.php/K+Birthday+Reminder?content=91641
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	kdepimlibs4-devel
 Requires:	kdebase4-runtime => 4.3
@@ -45,6 +45,7 @@ Hope you will enjoy using it anyway.
 
 %prep
 %setup -q -n KBirthdayPlasma_0_9_73
+%patch0 -p 0
 
 %build
 %cmake_kde4
