@@ -1,7 +1,7 @@
 %define name	plasma-applet-kbirthdayreminder
 %define srcname birthday-plasmoid
 %define version	 0.9.73
-%define release	%mkrel 2
+%define release	%mkrel 3
 %define Summary	 A reminder for birthdays and anniversaries
 
 
@@ -17,6 +17,7 @@ URL:		http://kde-look.org/content/show.php/K+Birthday+Reminder?content=91641
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	kdepimlibs4-devel
 Requires:	kdebase4-runtime => 4.3
+Requires:	plasma-dataengine-kbirthdayreminder
 Provides:	plasma-applet
 
 
@@ -35,13 +36,23 @@ Hope you will enjoy using it anyway.
 %defattr(-,root,root)
 %doc	ChangeLog LICENSE.GPL README
 %_kde_libdir/kde4/plasma_applet_kbirthdayapplet.so
-%_kde_libdir/kde4/plasma_engine_kabc.so
 %_kde_services/plasma-applet-kbirthday.desktop
-%_kde_services/plasma-dataengine-kabc.desktop
 %_kde_datadir/apps/desktoptheme/default/widgets/birthdaycake.svg
 %_iconsdir/hicolor/scalable/apps/birthdaycake.svgz
 
-#------------------------------------------------------------------------------
+#-----------------------------------------------------------------------
+%package -n plasma-dataengine-kbirthdayreminder
+Summary:	Data engine for %{name}
+Group:		Graphical desktop/KDE
+%description -n plasma-dataengine-kbirthdayreminder
+This package provides the dataengine for %{name}
+
+%files -n plasma-dataengine-kbirthdayreminder
+%defattr(-,root,root)
+%_kde_libdir/kde4/plasma_engine_kabc.so
+%_kde_services/plasma-dataengine-kabc.desktop
+
+#-----------------------------------------------------------------------
 
 %prep
 %setup -q -n KBirthdayPlasma_0_9_73
@@ -56,5 +67,6 @@ Hope you will enjoy using it anyway.
 %{makeinstall_std} -C build
 
 %find_lang plasma_applet_kbirthdayapplet
+
 %clean
 %__rm -rf %{buildroot}
