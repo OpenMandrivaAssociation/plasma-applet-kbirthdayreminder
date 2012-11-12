@@ -1,0 +1,29 @@
+#
+#Description: This patch fix icon file name & Category of the applet
+#Forwaded: upstream 
+#Bug:
+#Author: Balcaen John <mikala@mandriva.org>
+#
+
+Index: src/applet/plasma-applet-kbirthday.desktop
+===================================================================
+--- src/applet/plasma-applet-kbirthday.desktop
++++ src/applet/plasma-applet-kbirthday.desktop	2010-04-23 18:44:03.409536281 -0300
+@@ -5,7 +5,7 @@
+ Comment=Remembers you on anniversaries
+ Comment[de]=Erinnert an Geburtstage und Jahrestage von Kontakten im KDE-Adressbuch
+ Comment[fr]=Souvenez-vous des dates anniversaires
+-Icon=cookie
++Icon=birthdaycake.svgz
+ Type=Service
+ X-KDE-ServiceTypes=Plasma/Applet
+ 
+@@ -15,7 +15,7 @@
+ X-KDE-PluginInfo-Name=kbirthdayapplet
+ X-KDE-PluginInfo-Version=0.9.72
+ X-KDE-PluginInfo-Website=http://www.kde-look.org/content/show.php/K+Birthday+Reminder?content=91641
+-X-KDE-PluginInfo-Category=Time and Date
++X-KDE-PluginInfo-Category=Date and Time
+ X-KDE-PluginInfo-Depends=
+ X-KDE-PluginInfo-License=GPL
+ X-KDE-PluginInfo-EnabledByDefault=true
