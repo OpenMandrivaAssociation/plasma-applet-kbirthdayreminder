@@ -70,3 +70,20 @@ This package provides the dataengine for %{name}
 
 %clean
 %__rm -rf %{buildroot}
+
+
+%changelog
+* Fri Jul 30 2010 John Balcaen <mikala@mandriva.org> 0.9.73-3mdv2011.0
++ Revision: 563774
+- Add a plasma-dataengine subpackage
+- add description on patch0
+
+* Fri Apr 23 2010 John Balcaen <mikala@mandriva.org> 0.9.73-2mdv2010.1
++ Revision: 538387
+- Add a patch to fix icon & category
+
+* Mon Feb 15 2010 John Balcaen <mikala@mandriva.org> 0.9.73-1mdv2010.1
++ Revision: 506133
+- import plasma-applet-kbirthdayreminder
+
+
