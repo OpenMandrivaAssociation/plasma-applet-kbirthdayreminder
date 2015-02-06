@@ -1,7 +1,7 @@
 %define name	plasma-applet-kbirthdayreminder
 %define srcname birthday-plasmoid
 %define version	 0.9.73
-%define release	%mkrel 3
+%define release	4
 %define Summary	 A reminder for birthdays and anniversaries
 
 
