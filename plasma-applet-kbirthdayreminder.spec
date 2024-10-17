@@ -13,7 +13,7 @@ Source0:	http://kde-look.org/CONTENT/content-files/91641-%srcname-%version.tar.b
 Patch0:		plasma-applet-kbirthdayreminder-0.9.73-mdv-fix-icon-and-category.patch
 License:	GPLv2
 Group:		Graphical desktop/KDE
-URL:		http://kde-look.org/content/show.php/K+Birthday+Reminder?content=91641
+URL:		https://kde-look.org/content/show.php/K+Birthday+Reminder?content=91641
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	kdepimlibs4-devel
 Requires:	kdebase4-runtime => 4.3
